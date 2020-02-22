@@ -1,0 +1,669 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.8.0 on win32)" generated="20200222 17:02:24.099" rpa="false">
+<suite id="s1" name="Tests" source="D:\Freelancing\littlelives_test\Tests">
+<suite id="s1-s1" name="Attendance" source="D:\Freelancing\littlelives_test\Tests\Attendance">
+<suite id="s1-s1-s1" name="01 Attendance" source="D:\Freelancing\littlelives_test\Tests\Attendance\01_attendance.robot">
+<kw name="Login And Go To Attendance Page" library="common_keywords" type="setup">
+<kw name="Start Browser" library="resource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200222 17:02:24.284" level="INFO">Opening browser 'chrome' to base url 'https://staging.littlelives.com'.</msg>
+<status status="PASS" starttime="20200222 17:02:24.284" endtime="20200222 17:02:31.280"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200222 17:02:31.280" endtime="20200222 17:02:35.397"></status>
+</kw>
+<status status="PASS" starttime="20200222 17:02:24.284" endtime="20200222 17:02:35.397"></status>
+</kw>
+<kw name="Login" library="resource">
+<arguments>
+<arg>${USER}</arg>
+<arg>${PWD}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>css=input#UserUsername</arg>
+<arg>${user}</arg>
+</arguments>
+<msg timestamp="20200222 17:02:35.398" level="INFO">Typing text 'dotdad@littlelives.com' into text field 'css=input#UserUsername'.</msg>
+<status status="PASS" starttime="20200222 17:02:35.398" endtime="20200222 17:02:35.530"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>css=input#UserPassword</arg>
+<arg>${pwd}</arg>
+</arguments>
+<msg timestamp="20200222 17:02:35.530" level="INFO">Typing text '123456' into text field 'css=input#UserPassword'.</msg>
+<status status="PASS" starttime="20200222 17:02:35.530" endtime="20200222 17:02:35.600"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css=input[value="Sign In"]</arg>
+</arguments>
+<msg timestamp="20200222 17:02:35.600" level="INFO">Clicking element 'css=input[value="Sign In"]'.</msg>
+<status status="PASS" starttime="20200222 17:02:35.600" endtime="20200222 17:02:38.600"></status>
+</kw>
+<status status="PASS" starttime="20200222 17:02:35.397" endtime="20200222 17:02:38.600"></status>
+</kw>
+<kw name="Wait For Main Page Loaded" library="resource">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>css=header#ll-header</arg>
+</arguments>
+<status status="PASS" starttime="20200222 17:02:38.601" endtime="20200222 17:02:38.612"></status>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>Click Element</arg>
+<arg>css=button#btn-close-modal-video-player</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css=button#btn-close-modal-video-player</arg>
+</arguments>
+<msg timestamp="20200222 17:02:38.612" level="INFO">Clicking element 'css=button#btn-close-modal-video-player'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200222 17:02:38.993" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-78.png"&gt;&lt;img src="selenium-screenshot-78.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200222 17:02:38.620" endtime="20200222 17:02:38.993"></status>
+</kw>
+<msg timestamp="20200222 17:02:38.995" level="FAIL">Element with locator 'css=button#btn-close-modal-video-player' not found.</msg>
+<status status="FAIL" starttime="20200222 17:02:38.612" endtime="20200222 17:02:38.995"></status>
+</kw>
+<status status="PASS" starttime="20200222 17:02:38.612" endtime="20200222 17:02:38.995"></status>
+</kw>
+<status status="PASS" starttime="20200222 17:02:38.600" endtime="20200222 17:02:38.995"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css=a[href="/attendances"]</arg>
+</arguments>
+<msg timestamp="20200222 17:02:38.995" level="INFO">Clicking element 'css=a[href="/attendances"]'.</msg>
+<status status="PASS" starttime="20200222 17:02:38.995" endtime="20200222 17:02:40.813"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>xpath=//div[contains(@data,"[object Object]")]</arg>
+</arguments>
+<status status="PASS" starttime="20200222 17:02:40.813" endtime="20200222 17:02:41.040"></status>
+</kw>
+<status status="PASS" starttime="20200222 17:02:24.284" endtime="20200222 17:02:41.040"></status>
+</kw>
+<test id="s1-s1-s1-t1" name="Declare Day Off">
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<arguments>
+<arg>time_zone=UTC</arg>
+<arg>increment=-1 days</arg>
+<arg>result_format=%Y-%m-%d</arg>
+</arguments>
+<assign>
+<var>${start_day}</var>
+</assign>
+<msg timestamp="20200222 17:02:41.042" level="INFO">${start_day} = 2020-02-21</msg>
+<status status="PASS" starttime="20200222 17:02:41.042" endtime="20200222 17:02:41.042"></status>
+</kw>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<arguments>
+<arg>time_zone=UTC</arg>
+<arg>increment=1 days</arg>
+<arg>result_format=%Y-%m-%d</arg>
+</arguments>
+<assign>
+<var>${end_day}</var>
+</assign>
+<msg timestamp="20200222 17:02:41.042" level="INFO">${end_day} = 2020-02-23</msg>
+<status status="PASS" starttime="20200222 17:02:41.042" endtime="20200222 17:02:41.043"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>This is a test reason</arg>
+</arguments>
+<assign>
+<var>${reason}</var>
+</assign>
+<msg timestamp="20200222 17:02:41.043" level="INFO">${reason} = This is a test reason</msg>
+<status status="PASS" starttime="20200222 17:02:41.043" endtime="20200222 17:02:41.043"></status>
+</kw>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<arguments>
+<arg>time_zone=UTC</arg>
+<arg>result_format=%Y-%m-%d</arg>
+</arguments>
+<assign>
+<var>${today}</var>
+</assign>
+<msg timestamp="20200222 17:02:41.043" level="INFO">${today} = 2020-02-22</msg>
+<status status="PASS" starttime="20200222 17:02:41.043" endtime="20200222 17:02:41.043"></status>
+</kw>
+<kw name="Select Attendance Date">
+<arguments>
+<arg>${today}</arg>
+</arguments>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>document.querySelector("input.filter-date__input-date-picker").value='${date}'</arg>
+</arguments>
+<msg timestamp="20200222 17:02:41.044" level="INFO">Executing JavaScript:
+document.querySelector("input.filter-date__input-date-picker").value='2020-02-22'
+Without any arguments.</msg>
+<status status="PASS" starttime="20200222 17:02:41.043" endtime="20200222 17:02:41.047"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>xpath=//div[contains(@data,"[object Object]")]</arg>
+</arguments>
+<status status="PASS" starttime="20200222 17:02:41.047" endtime="20200222 17:02:41.059"></status>
+</kw>
+<status status="PASS" starttime="20200222 17:02:41.043" endtime="20200222 17:02:41.060"></status>
+</kw>
+<kw name="Declare Day Off">
+<arguments>
+<arg>${start_day}</arg>
+<arg>${end_day}</arg>
+<arg>${reason}</arg>
+</arguments>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>css=img[alt="More option"]</arg>
+</arguments>
+<msg timestamp="20200222 17:02:41.060" level="INFO">Simulating Mouse Over on element 'css=img[alt="More option"]'.</msg>
+<status status="PASS" starttime="20200222 17:02:41.060" endtime="20200222 17:02:41.415"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>css=ul.attendance-more-context__menu-list</arg>
+</arguments>
+<status status="PASS" starttime="20200222 17:02:41.415" endtime="20200222 17:02:41.438"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//li[text()="Declare day off"]</arg>
+</arguments>
+<msg timestamp="20200222 17:02:41.438" level="INFO">Clicking element 'xpath=//li[text()="Declare day off"]'.</msg>
+<status status="PASS" starttime="20200222 17:02:41.438" endtime="20200222 17:02:41.516"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>css=div.popup-attendance-declare-day-off.v-dialog--active</arg>
+</arguments>
+<status status="PASS" starttime="20200222 17:02:41.516" endtime="20200222 17:02:41.756"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>css=textarea[aria-label="Reason"]</arg>
+<arg>${reason}</arg>
+</arguments>
+<msg timestamp="20200222 17:02:41.756" level="INFO">Typing text 'This is a test reason' into text field 'css=textarea[aria-label="Reason"]'.</msg>
+<status status="PASS" starttime="20200222 17:02:41.756" endtime="20200222 17:02:42.133"></status>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>document.querySelector("div.v-dialog--active input[aria-label='Start Date']").value='${start_day}'</arg>
+</arguments>
+<msg timestamp="20200222 17:02:42.134" level="INFO">Executing JavaScript:
+document.querySelector("div.v-dialog--active input[aria-label='Start Date']").value='2020-02-21'
+Without any arguments.</msg>
+<status status="PASS" starttime="20200222 17:02:42.133" endtime="20200222 17:02:42.140"></status>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>document.querySelector("div.v-dialog--active input[aria-label='End Date']").value='${end_day}'</arg>
+</arguments>
+<msg timestamp="20200222 17:02:42.140" level="INFO">Executing JavaScript:
+document.querySelector("div.v-dialog--active input[aria-label='End Date']").value='2020-02-23'
+Without any arguments.</msg>
+<status status="PASS" starttime="20200222 17:02:42.140" endtime="20200222 17:02:42.144"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//div[contains(@class,"v-dialog--active")]//div[text()="Apply"]</arg>
+</arguments>
+<msg timestamp="20200222 17:02:42.144" level="INFO">Clicking element 'xpath=//div[contains(@class,"v-dialog--active")]//div[text()="Apply"]'.</msg>
+<status status="PASS" starttime="20200222 17:02:42.144" endtime="20200222 17:02:42.214"></status>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<arguments>
+<arg>css=div.popup-attendance-declare-day-off.v-dialog--active</arg>
+</arguments>
+<status status="PASS" starttime="20200222 17:02:42.214" endtime="20200222 17:02:42.648"></status>
+</kw>
+<status status="PASS" starttime="20200222 17:02:41.060" endtime="20200222 17:02:42.648"></status>
+</kw>
+<kw name="Declare Day Off Successfully">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>xpath=//div[contains(text(),"Declare day off for this school successfully")]</arg>
+</arguments>
+<status status="PASS" starttime="20200222 17:02:42.648" endtime="20200222 17:02:42.660"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//span[contains(text(),"Cancel day off for")]</arg>
+</arguments>
+<status status="PASS" starttime="20200222 17:02:42.660" endtime="20200222 17:02:43.133"></status>
+</kw>
+<status status="PASS" starttime="20200222 17:02:42.648" endtime="20200222 17:02:43.133"></status>
+</kw>
+<tags>
+<tag>attendance</tag>
+</tags>
+<status status="PASS" starttime="20200222 17:02:41.040" endtime="20200222 17:02:43.133" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t2" name="Cancel Day Off">
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<arguments>
+<arg>time_zone=UTC</arg>
+<arg>result_format=%Y-%m-%d</arg>
+</arguments>
+<assign>
+<var>${today}</var>
+</assign>
+<msg timestamp="20200222 17:02:43.135" level="INFO">${today} = 2020-02-22</msg>
+<status status="PASS" starttime="20200222 17:02:43.134" endtime="20200222 17:02:43.135"></status>
+</kw>
+<kw name="Cancel Day Off">
+<arguments>
+<arg>${today}</arg>
+</arguments>
+<kw name="Select Attendance Date">
+<arguments>
+<arg>${date}</arg>
+</arguments>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>document.querySelector("input.filter-date__input-date-picker").value='${date}'</arg>
+</arguments>
+<msg timestamp="20200222 17:02:43.137" level="INFO">Executing JavaScript:
+document.querySelector("input.filter-date__input-date-picker").value='2020-02-22'
+Without any arguments.</msg>
+<status status="PASS" starttime="20200222 17:02:43.136" endtime="20200222 17:02:43.142"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>xpath=//div[contains(@data,"[object Object]")]</arg>
+</arguments>
+<status status="PASS" starttime="20200222 17:02:43.142" endtime="20200222 17:02:43.148"></status>
+</kw>
+<status status="PASS" starttime="20200222 17:02:43.136" endtime="20200222 17:02:43.148"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//span[contains(text(),"Cancel day off for")]</arg>
+</arguments>
+<msg timestamp="20200222 17:02:43.148" level="INFO">Clicking element 'xpath=//span[contains(text(),"Cancel day off for")]'.</msg>
+<status status="PASS" starttime="20200222 17:02:43.148" endtime="20200222 17:02:43.191"></status>
+</kw>
+<kw name="Confirm Dialog">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>xpath=//div[contains(@class,"v-dialog--active")][not(contains(@class,"dialog-transition-enter-active"))]</arg>
+</arguments>
+<status status="PASS" starttime="20200222 17:02:43.191" endtime="20200222 17:02:43.617"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//div[contains(@class,"v-dialog--active")]//div[text()="Apply"]</arg>
+</arguments>
+<msg timestamp="20200222 17:02:43.617" level="INFO">Clicking element 'xpath=//div[contains(@class,"v-dialog--active")]//div[text()="Apply"]'.</msg>
+<status status="PASS" starttime="20200222 17:02:43.617" endtime="20200222 17:02:43.694"></status>
+</kw>
+<kw name="Wait Until Page Does Not Contain Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` disappears from the current page.</doc>
+<arguments>
+<arg>css=div.v-dialog--active</arg>
+</arguments>
+<status status="PASS" starttime="20200222 17:02:43.694" endtime="20200222 17:02:43.707"></status>
+</kw>
+<status status="PASS" starttime="20200222 17:02:43.191" endtime="20200222 17:02:43.707"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>xpath=//div[contains(text(),"Cancel holiday for this school successfully")]</arg>
+</arguments>
+<status status="PASS" starttime="20200222 17:02:43.707" endtime="20200222 17:02:43.940"></status>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<arguments>
+<arg>xpath=//span[contains(text(),"Cancel day off for")]</arg>
+</arguments>
+<status status="PASS" starttime="20200222 17:02:43.940" endtime="20200222 17:02:43.947"></status>
+</kw>
+<status status="PASS" starttime="20200222 17:02:43.135" endtime="20200222 17:02:43.947"></status>
+</kw>
+<tags>
+<tag>attendance</tag>
+</tags>
+<status status="PASS" starttime="20200222 17:02:43.134" endtime="20200222 17:02:43.947" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t3" name="Print Parent Check In QR Code">
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<arguments>
+<arg>time_zone=UTC</arg>
+<arg>increment=-1 days</arg>
+<arg>result_format=%Y-%m-%d</arg>
+</arguments>
+<assign>
+<var>${start_day}</var>
+</assign>
+<msg timestamp="20200222 17:02:43.948" level="INFO">${start_day} = 2020-02-21</msg>
+<status status="PASS" starttime="20200222 17:02:43.948" endtime="20200222 17:02:43.948"></status>
+</kw>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<arguments>
+<arg>time_zone=UTC</arg>
+<arg>increment=1 days</arg>
+<arg>result_format=%Y-%m-%d</arg>
+</arguments>
+<assign>
+<var>${end_day}</var>
+</assign>
+<msg timestamp="20200222 17:02:43.949" level="INFO">${end_day} = 2020-02-23</msg>
+<status status="PASS" starttime="20200222 17:02:43.948" endtime="20200222 17:02:43.949"></status>
+</kw>
+<kw name="Print QR Code">
+<arguments>
+<arg>${start_day}</arg>
+<arg>${end_day}</arg>
+</arguments>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>css=img[alt="More option"]</arg>
+</arguments>
+<msg timestamp="20200222 17:02:43.949" level="INFO">Simulating Mouse Over on element 'css=img[alt="More option"]'.</msg>
+<status status="PASS" starttime="20200222 17:02:43.949" endtime="20200222 17:02:44.223"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>css=ul.attendance-more-context__menu-list</arg>
+</arguments>
+<status status="PASS" starttime="20200222 17:02:44.223" endtime="20200222 17:02:44.243"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//li[text()="Print Parent Check In QR Code"]</arg>
+</arguments>
+<msg timestamp="20200222 17:02:44.244" level="INFO">Clicking element 'xpath=//li[text()="Print Parent Check In QR Code"]'.</msg>
+<status status="PASS" starttime="20200222 17:02:44.243" endtime="20200222 17:02:44.301"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>css=div.popup-attendance-print-checkin-qr-code.v-dialog--active</arg>
+</arguments>
+<status status="PASS" starttime="20200222 17:02:44.301" endtime="20200222 17:02:44.563"></status>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>document.querySelector("div.v-dialog--active input[aria-label='Start Date']").value='${start_day}'</arg>
+</arguments>
+<msg timestamp="20200222 17:02:44.564" level="INFO">Executing JavaScript:
+document.querySelector("div.v-dialog--active input[aria-label='Start Date']").value='2020-02-21'
+Without any arguments.</msg>
+<status status="PASS" starttime="20200222 17:02:44.563" endtime="20200222 17:02:44.568"></status>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>document.querySelector("div.v-dialog--active input[aria-label='End Date']").value='${end_day}'</arg>
+</arguments>
+<msg timestamp="20200222 17:02:44.568" level="INFO">Executing JavaScript:
+document.querySelector("div.v-dialog--active input[aria-label='End Date']").value='2020-02-23'
+Without any arguments.</msg>
+<status status="PASS" starttime="20200222 17:02:44.568" endtime="20200222 17:02:44.577"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//div[contains(@class,"v-dialog--active")]//div[text()="Generate"]</arg>
+</arguments>
+<msg timestamp="20200222 17:02:44.577" level="INFO">Clicking element 'xpath=//div[contains(@class,"v-dialog--active")]//div[text()="Generate"]'.</msg>
+<status status="PASS" starttime="20200222 17:02:44.577" endtime="20200222 17:02:44.642"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>css=span.v-btn__loading</arg>
+</arguments>
+<status status="PASS" starttime="20200222 17:02:44.642" endtime="20200222 17:02:44.650"></status>
+</kw>
+<kw name="Wait Until Page Does Not Contain Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` disappears from the current page.</doc>
+<arguments>
+<arg>css=span.v-btn__loading</arg>
+</arguments>
+<status status="PASS" starttime="20200222 17:02:44.650" endtime="20200222 17:02:45.076"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css=div.v-image div.v-responsive__content</arg>
+</arguments>
+<msg timestamp="20200222 17:02:45.076" level="INFO">Clicking element 'css=div.v-image div.v-responsive__content'.</msg>
+<status status="PASS" starttime="20200222 17:02:45.076" endtime="20200222 17:02:45.208"></status>
+</kw>
+<kw name="Select Window" library="SeleniumLibrary">
+<doc>DEPRECATED in SeleniumLibrary 4.0. , use `Switch Window` instead.</doc>
+<arguments>
+<arg>NEW</arg>
+</arguments>
+<assign>
+<var>${handle}</var>
+</assign>
+<msg timestamp="20200222 17:02:45.214" level="INFO">${handle} = CDwindow-54469075E17A8BF58831CBA1ED2AD3A8</msg>
+<status status="PASS" starttime="20200222 17:02:45.208" endtime="20200222 17:02:45.214"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200222 17:02:47.217" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200222 17:02:45.214" endtime="20200222 17:02:47.217"></status>
+</kw>
+<kw name="Close Window" library="SeleniumLibrary">
+<doc>Closes currently opened and selected browser window/tab.</doc>
+<status status="PASS" starttime="20200222 17:02:47.217" endtime="20200222 17:02:51.246"></status>
+</kw>
+<kw name="Select Window" library="SeleniumLibrary">
+<doc>DEPRECATED in SeleniumLibrary 4.0. , use `Switch Window` instead.</doc>
+<arguments>
+<arg>MAIN</arg>
+</arguments>
+<status status="PASS" starttime="20200222 17:02:51.246" endtime="20200222 17:02:51.263"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//div[contains(@class,"v-dialog--active")]//div[text()="Cancel"]</arg>
+</arguments>
+<msg timestamp="20200222 17:02:51.264" level="INFO">Clicking element 'xpath=//div[contains(@class,"v-dialog--active")]//div[text()="Cancel"]'.</msg>
+<status status="PASS" starttime="20200222 17:02:51.264" endtime="20200222 17:02:51.447"></status>
+</kw>
+<status status="PASS" starttime="20200222 17:02:43.949" endtime="20200222 17:02:51.447"></status>
+</kw>
+<tags>
+<tag>attendance</tag>
+</tags>
+<status status="PASS" starttime="20200222 17:02:43.947" endtime="20200222 17:02:51.447" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t4" name="Select Date">
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<arguments>
+<arg>time_zone=UTC</arg>
+<arg>increment=-1 days</arg>
+<arg>result_format=%Y-%m-%d</arg>
+</arguments>
+<assign>
+<var>${yesterday}</var>
+</assign>
+<msg timestamp="20200222 17:02:51.448" level="INFO">${yesterday} = 2020-02-21</msg>
+<status status="PASS" starttime="20200222 17:02:51.448" endtime="20200222 17:02:51.448"></status>
+</kw>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<arguments>
+<arg>time_zone=UTC</arg>
+<arg>increment=1 days</arg>
+<arg>result_format=%Y-%m-%d</arg>
+</arguments>
+<assign>
+<var>${future}</var>
+</assign>
+<msg timestamp="20200222 17:02:51.448" level="INFO">${future} = 2020-02-23</msg>
+<status status="PASS" starttime="20200222 17:02:51.448" endtime="20200222 17:02:51.449"></status>
+</kw>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<arguments>
+<arg>time_zone=UTC</arg>
+<arg>result_format=%Y-%m-%d</arg>
+</arguments>
+<assign>
+<var>${today}</var>
+</assign>
+<msg timestamp="20200222 17:02:51.449" level="INFO">${today} = 2020-02-22</msg>
+<status status="PASS" starttime="20200222 17:02:51.449" endtime="20200222 17:02:51.449"></status>
+</kw>
+<kw name="Select Attendance Date">
+<arguments>
+<arg>${today}</arg>
+</arguments>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>document.querySelector("input.filter-date__input-date-picker").value='${date}'</arg>
+</arguments>
+<msg timestamp="20200222 17:02:51.449" level="INFO">Executing JavaScript:
+document.querySelector("input.filter-date__input-date-picker").value='2020-02-22'
+Without any arguments.</msg>
+<status status="PASS" starttime="20200222 17:02:51.449" endtime="20200222 17:02:51.453"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>xpath=//div[contains(@data,"[object Object]")]</arg>
+</arguments>
+<status status="PASS" starttime="20200222 17:02:51.453" endtime="20200222 17:02:51.460"></status>
+</kw>
+<status status="PASS" starttime="20200222 17:02:51.449" endtime="20200222 17:02:51.460"></status>
+</kw>
+<kw name="Select Attendance Date">
+<arguments>
+<arg>${yesterday}</arg>
+</arguments>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>document.querySelector("input.filter-date__input-date-picker").value='${date}'</arg>
+</arguments>
+<msg timestamp="20200222 17:02:51.461" level="INFO">Executing JavaScript:
+document.querySelector("input.filter-date__input-date-picker").value='2020-02-21'
+Without any arguments.</msg>
+<status status="PASS" starttime="20200222 17:02:51.461" endtime="20200222 17:02:51.465"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>xpath=//div[contains(@data,"[object Object]")]</arg>
+</arguments>
+<status status="PASS" starttime="20200222 17:02:51.466" endtime="20200222 17:02:51.473"></status>
+</kw>
+<status status="PASS" starttime="20200222 17:02:51.460" endtime="20200222 17:02:51.473"></status>
+</kw>
+<kw name="Select Attendance Date">
+<arguments>
+<arg>${future}</arg>
+</arguments>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>document.querySelector("input.filter-date__input-date-picker").value='${date}'</arg>
+</arguments>
+<msg timestamp="20200222 17:02:51.474" level="INFO">Executing JavaScript:
+document.querySelector("input.filter-date__input-date-picker").value='2020-02-23'
+Without any arguments.</msg>
+<status status="PASS" starttime="20200222 17:02:51.474" endtime="20200222 17:02:51.479"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>xpath=//div[contains(@data,"[object Object]")]</arg>
+</arguments>
+<status status="PASS" starttime="20200222 17:02:51.479" endtime="20200222 17:02:51.486"></status>
+</kw>
+<status status="PASS" starttime="20200222 17:02:51.473" endtime="20200222 17:02:51.486"></status>
+</kw>
+<tags>
+<tag>attendance</tag>
+</tags>
+<status status="PASS" starttime="20200222 17:02:51.447" endtime="20200222 17:02:51.486" critical="yes"></status>
+</test>
+<doc>Test Attendance View</doc>
+<status status="PASS" starttime="20200222 17:02:24.122" endtime="20200222 17:02:51.487"></status>
+</suite>
+<status status="PASS" starttime="20200222 17:02:24.121" endtime="20200222 17:02:51.493"></status>
+</suite>
+<status status="PASS" starttime="20200222 17:02:24.100" endtime="20200222 17:02:51.495"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0">Critical Tests</stat>
+<stat pass="4" fail="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="4" fail="0">attendance</stat>
+</tag>
+<suite>
+<stat pass="4" fail="0" id="s1" name="Tests">Tests</stat>
+<stat pass="4" fail="0" id="s1-s1" name="Attendance">Tests.Attendance</stat>
+<stat pass="4" fail="0" id="s1-s1-s1" name="01 Attendance">Tests.Attendance.01 Attendance</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

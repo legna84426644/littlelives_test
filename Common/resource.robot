@@ -12,7 +12,10 @@ ${PWD}    123456
 
 *** Keywords ***
 Start Browser
-    Open Browser    ${URL}    ${BROWSER}
+    ${list} =     Create List    --no-sandbox    --disable-dev-shm-usage
+    ${args} =     Create Dictionary    args=${list}
+    ${desired caps} =     Create Dictionary     chromeOptions=${args}
+    Open Browser    ${URL}    ${BROWSER}    desired_capabilities=${desired caps}
     Maximize Browser Window
 
 Login

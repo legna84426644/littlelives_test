@@ -1,0 +1,1 @@
+python -m robot --outputdir Reports ${ROBOT_ARGS} Tests/${TESTS_SUB_DIR}

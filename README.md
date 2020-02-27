@@ -4,9 +4,21 @@
 * export PATH=$PATH:/path/to/chrome-driver
 * Install `robotframework` and `robotframework-seleniumlibrary` in `requirements.txt`
 
-# To Run Test
+# To Run Test On Local
 ```sh
 sh run_all_test.sh 
+```
+
+# To Run Test On Docker
+
+* Pull the image
+```shell script
+docker pull lhthanh/littlelives:1.0
+```
+
+* Run test
+```sh
+sh run_docker.sh
 ```
 
 # Debug

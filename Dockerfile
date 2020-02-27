@@ -14,16 +14,26 @@ RUN apt-get update \
 #COPY . ./littlelives/
 COPY . ./
 
+RUN chmod 755 ./run_all_test.sh
+
+RUN pip install --upgrade pip
+
 RUN pip install -r ./requirements.txt
 
-RUN wget https://github.com/mozilla/geckodriver/releases/download/v0.24.0/geckodriver-v0.24.0-linux64.tar.gz \
+RUN wget https://github.com/mozilla/geckodriver/releases/download/v0.26.0/geckodriver-v0.26.0-linux64.tar.gz \
 	&& tar xvzf geckodriver-*.tar.gz \
 	&& rm geckodriver-*.tar.gz \
 	&& mv geckodriver /usr/local/bin \
 	&& chmod a+x /usr/local/bin/geckodriver
+
 RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb \
 	&& dpkg -i google-chrome*.deb \
 	&& rm google-chrome*.deb
+
+#RUN wget https://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_74.0.3729.157-1_amd64.deb \
+#	&& dpkg -i google-chrome-stable_74.0.3729.157-1_amd64.deb \
+#	&& rm google-chrome*.deb
+
 RUN wget https://chromedriver.storage.googleapis.com/80.0.3987.106/chromedriver_linux64.zip \
 	&& unzip chromedriver_linux64.zip \
 	&& rm chromedriver_linux64.zip \

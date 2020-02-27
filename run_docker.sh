@@ -6,6 +6,8 @@ docker run --rm \
            -v "$PWD/Common":/Common \
            -v "$PWD/Reports":/Reports \
            -v "$PWD/Tests":/Tests \
+           -v "$PWD/scripts":/scripts \
            --security-opt seccomp:unconfined \
            --shm-size "256M" \
-           thanh
+           --privileged \
+           lhthanh/littlelives:1.0

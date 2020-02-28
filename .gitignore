@@ -1,1 +1,4 @@
-Reports/*
+*.pyc
+*.log
+
+Reports*/

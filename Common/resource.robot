@@ -1,7 +1,7 @@
 *** Settings ***
 Library    SeleniumLibrary    timeout=5.0    run_on_failure=Capture Page Screenshot
 Library    DateTime
-Library     XvfbRobot
+#Library     XvfbRobot
 Resource    ${EXEC_DIR}/Common/common_keywords.robot
 Resource    ${EXEC_DIR}/Common/common_selectors.robot
 
@@ -14,7 +14,7 @@ ${TMP_PATH}    /tmp
 
 *** Keywords ***
 Start Browser
-    Start Virtual Display    1920    1080
+    #Start Virtual Display    1920    1080
     ${options}  Evaluate  sys.modules['selenium.webdriver'].ChromeOptions()  sys, selenium.webdriver
     Call Method  ${options}  add_argument  --no-sandbox
     ${prefs}    Create Dictionary    download.default_directory=${TMP_PATH}
